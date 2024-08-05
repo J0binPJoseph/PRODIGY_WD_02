@@ -1,0 +1,76 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 2.5em;
+    color: #333;
+    text-shadow: 1px 1px 2px #aaa;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    gap: 10px;
+    margin: 20px 0;
+    padding: 10px;
+    border: 3px solid #333;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cell {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: bold;
+    border: 2px solid #333;
+    cursor: pointer;
+    background: linear-gradient(145deg, #e3f2fd, #bbdefb);
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 5px;
+}
+
+.cell:hover {
+    background: linear-gradient(145deg, #bbdefb, #e3f2fd);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cell .x {
+    color: #ff5722; /* Orange color for X */
+}
+
+.cell .o {
+    color: #03a9f4; /* Blue color for O */
+}
+
+#reset {
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(145deg, #ff4081, #f50057);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#reset:hover {
+    background: linear-gradient(145deg, #f50057, #ff4081);
+    transform: scale(1.05);
+}
